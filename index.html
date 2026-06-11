@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurik Advisory | Enterprise Technology Advisory</title>
+  <style>
+    :root {
+      --navy: #111827;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --gold: #b8892f;
+      --gold-soft: #f6efe2;
+      --cream: #fbfaf7;
+      --line: #e5e0d6;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 250, 247, 0.94);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .nav {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 92px 8% 76px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      line-height: 0.96;
+      margin: 0 0 28px;
+      color: var(--navy);
+      letter-spacing: -0.05em;
+    }
+
+    .hero p {
+      font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 0 34px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      border: 1px solid var(--line);
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 24px 70px rgba(17, 24, 39, 0.09);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric strong {
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .metric span {
+      color: var(--muted);
+      text-align: right;
+    }
+
+    section {
+      padding: 78px 8%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.1rem, 4vw, 3.5rem);
+      margin: 0 0 14px;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      min-height: 238px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 42px rgba(17, 24, 39, 0.09);
+      border-color: rgba(184, 137, 47, 0.45);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.12rem;
+      line-height: 1.25;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .statement {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 48px;
+      margin-top: 54px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .statement h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+
+    .statement p {
+      color: #d1d5db;
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      padding: 34px 8%;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1100px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 68px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .statement {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 22px 6%;
+      }
+
+      .hero, section {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card, .statement {
+        padding: 28px;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">Aurik Advisory</div>
+      <div class="nav">Strategy · Delivery · Transformation · AI</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Enterprise Technology Advisory</div>
+          <h1>For Complex, High-Stakes Organizations</h1>
+          <p>
+            Partnering with organizations to modernize technology platforms, strengthen delivery execution,
+            and align capital investments to deliver measurable business outcomes and unparalleled customer experiences.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="mailto:contact@aurikadvisory.com">Start a Conversation</a>
+            <a class="button secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Aurik Advisory focus areas">
+          <h2>Turning technology ambition into measurable value.</h2>
+          <div class="metric">
+            <strong>Strategy</strong>
+            <span>Business-aligned roadmaps</span>
+          </div>
+          <div class="metric">
+            <strong>Execution</strong>
+            <span>Governance and delivery discipline</span>
+          </div>
+          <div class="metric">
+            <strong>Transformation</strong>
+            <span>Modern platforms and operating models</span>
+          </div>
+          <div class="metric">
+            <strong>AI</strong>
+            <span>Human-in-the-Loop enterprise adoption</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="services">
+        <div class="section-head">
+          <div class="eyebrow">Advisory Services</div>
+          <h2>Focused advisory for enterprise leaders.</h2>
+          <p>
+            Practical, executive-level partnership across strategy, modernization, delivery transformation,
+            and AI-enabled operating models.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="service-card">
+            <div>
+              <div class="service-number">01</div>
+              <h3>Executive Advisory</h3>
+              <p>Partner with executive leadership to navigate complex technology, transformation, and investment decisions.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-number">02</div>
+              <h3>Product Strategy & Roadmaps</h3>
+              <p>Translate business strategy into actionable product and technology roadmaps that drive growth, innovation, and measurable outcomes.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-number">03</div>
+              <h3>Platform Modernization</h3>
+              <p>Modernize platforms and operating models to improve scalability, resilience, and customer experience.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-number">04</div>
+              <h3>Delivery Transformation</h3>
+              <p>Strengthen governance, execution discipline, and portfolio visibility to improve predictability and value realization.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-number">05</div>
+              <h3>AI-Enabled Transformation</h3>
+              <p>Leverage AI, automation, and Human-in-the-Loop (HITL) models to accelerate decision-making and operational performance.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="statement">
+          <h2>Strategy is only valuable when it survives execution.</h2>
+          <p>
+            Aurik Advisory helps leadership teams close the gap between executive intent and enterprise delivery—bringing clarity,
+            discipline, and measurable outcomes to complex transformation agendas.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 Aurik Advisory. All rights reserved.</div>
+      <div>contact@aurikadvisory.com</div>
+    </footer>
+  </div>
+</body>
+</html>
