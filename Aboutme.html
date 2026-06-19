@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Aurik Advisory</title>
+
+  <style>
+    :root {
+      --navy: #111827;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --gold: #b8892f;
+      --cream: #fbfaf7;
+      --line: #e5e0d6;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 250, 247, 0.94);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--navy);
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 86px 8%;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+      line-height: 1;
+      margin: 0 0 24px;
+      color: var(--navy);
+      letter-spacing: -0.04em;
+      max-width: 1050px;
+    }
+
+    .intro {
+      font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+      color: var(--muted);
+      max-width: 950px;
+      margin-bottom: 56px;
+    }
+
+    .section {
+      border-top: 1px solid var(--line);
+      padding: 48px 0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      color: var(--navy);
+      margin: 0;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 1.1rem;
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin-top: 0;
+      color: var(--muted);
+    }
+
+    .philosophy {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 34px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .principle-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .principle-card span {
+      display: block;
+      color: var(--gold);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    .track-record {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .record-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .record-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .record-card p {
+      margin: 0;
+    }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .domain-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .final-statement {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 30px;
+      padding: 48px;
+      margin-top: 18px;
+    }
+
+    .final-statement h2 {
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .final-statement p {
+      color: #d1d5db;
+      font-size: 1.08rem;
+      max-width: 920px;
+    }
+
+    .final-line {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: var(--white);
+      margin-top: 28px;
+      letter-spacing: -0.03em;
+    }
+
+    footer {
+      padding: 34px 8%;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .section-grid,
+      .principles,
+      .track-record,
+      .domain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 64px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 22px 6%;
+      }
+
+      main {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .philosophy,
+      .record-card,
+      .domain-card,
+      .principle-card,
+      .final-statement {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="index.html">Aurik Advisory</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="about.html">About</a>
+      <a href="mailto:contact@aurikadvisory.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow">About Aurik Advisory</div>
+    <h1>Strategic Vision, Relentless Execution & Exceptional Results</h1>
+
+    <p class="intro">
+      Aurik Advisory is built for organizations navigating complex transformation,
+      high-stakes modernization, and the critical gap between executive intent and enterprise execution.
+    </p>
+
+    <section class="section">
+      <div class="section-grid">
+        <h2>Executive Track Record</h2>
+        <div>
+          <p>
+            A senior technology transformation executive with over 25 years of experience leading healthcare technology,
+            enterprise modernization, and digital transformation initiatives. With a track record spanning from foundational
+            infrastructure engineering at Sun Microsystems, later acquired by Oracle, to steering massive-scale enterprise
+            initiatives, the focus has always been on translating complex technology investments into measurable business outcomes.
+          </p>
+
+          <p>
+            Having operated within high-stakes, highly regulated environments, the founder specializes in bridging the critical
+            gap between C-suite strategic intent and flawless engineering execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <h2>Core Philosophy</h2>
+        <div class="philosophy">
+          <h3>Technology rarely limits transformation. Organizations do.</h3>
+          <p>
+            Traditional enterprise transformation models frequently fail not due to technological limitations, but because of
+            systemic gaps in organizational alignment. Success requires a disruptive approach to engagement—ensuring that from
+            day one, three non-negotiables are locked into place.
+          </p>
+
+          <div class="principles">
+            <div class="principle-card">
+              <span>01</span>
+              <h3>Explicit Executive Sponsorship</h3>
+              <p>Securing active, visible alignment at the highest levels to clear institutional roadblocks.</p>
+            </div>
+
+            <div class="principle-card">
+              <span>02</span>
+              <h3>Shared Metrics</h3>
+              <p>Establishing unified, transparent indicators of success that bridge the gap between business and technology teams.</p>
+            </div>
+
+            <div class="principle-card">
+              <span>03</span>
+              <h3>Cross-Functional Alignment</h3>
+              <p>Synchronizing product, engineering, and operational leadership to drive predictable execution.</p>
+            </div>
+          </div>
+
+          <p style="margin-top: 28px; margin-bottom: 0;">
+            When these elements are present, transformation becomes predictable. When they are absent, even the best technology struggles to succeed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <h2>Distinguished Track Record</h2>
+        <div>
+          <h3>Enterprise Leadership & Scale</h3>
+
+          <div class="track-record">
+            <div class="record-card">
+              <strong>Infrastructures of Scale</strong>
+              <p>Advised on and optimized enterprise software portfolios exceeding $50M, ensuring rigorous governance and portfolio visibility.</p>
+            </div>
+
+            <div class="record-card">
+              <strong>Global Talent Mobilization</strong>
+              <p>Built, scaled, and mentored cross-functional engineering and technology delivery organizations of over 250+ professionals globally.</p>
+            </div>
+
+            <div class="record-card">
+              <strong>Massive Consumer Impact</strong>
+              <p>Spearheaded the modernization of high-volume digital platforms supporting more than 12.6 million end-users.</p>
+            </div>
+
+            <div class="record-card">
+              <strong>Commercial Growth</strong>
+              <p>Strategically supported $10M+ in commercial deal closures, aligning technical architecture directly with market monetization strategies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-grid">
+        <h2>Domain & Industry Expertise</h2>
+        <div class="domain-grid">
+          <div class="domain-card">
+            <h3>Healthcare & Life Sciences</h3>
+            <p>
+              Deep expertise navigating the complex regulatory, privacy, and architecture demands of modern healthcare ecosystems.
+            </p>
+          </div>
+
+          <div class="domain-card">
+            <h3>High-Tech & Software Engineering</h3>
+            <p>
+              Deep-rooted technical heritage beginning in 2000 at Sun Microsystems, anchoring an enduring understanding of
+              distributed systems and robust infrastructure through its milestone integration into Oracle Corporation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-statement">
+      <h2>The Advisory Engagement</h2>
+      <p>
+        Aurik Advisory partners with executive leaders to modernize platforms, strengthen delivery capabilities,
+        improve portfolio governance, develop business-aligned technology roadmaps, and enable AI-driven transformation.
+      </p>
+
+      <p>
+        Every engagement is grounded in a simple objective:
+      </p>
+
+      <div class="final-line">
+        Transform technology investments into measurable business value.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 Aurik Advisory. All rights reserved.</div>
+    <div>contact@aurikadvisory.com</div>
+  </footer>
+</body>
+</html>
