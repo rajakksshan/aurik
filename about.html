@@ -26,7 +26,7 @@
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--cream);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
@@ -53,7 +53,7 @@
 
     .nav {
       display: flex;
-      gap: 22px;
+      gap: 24px;
       font-size: 0.92rem;
       align-items: center;
     }
@@ -69,7 +69,7 @@
     }
 
     main {
-      max-width: 1180px;
+      max-width: 920px;
       margin: 0 auto;
       padding: 86px 8%;
     }
@@ -85,136 +85,87 @@
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
       line-height: 1;
-      margin: 0 0 26px;
+      margin: 0 0 28px;
       color: var(--navy);
       letter-spacing: -0.045em;
-      max-width: 1000px;
-    }
-
-    .intro {
-      font-size: clamp(1.08rem, 1.5vw, 1.3rem);
-      color: var(--muted);
-      max-width: 950px;
-      margin: 0 0 64px;
-    }
-
-    .section {
-      border-top: 1px solid var(--line);
-      padding: 52px 0;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 64px;
-      align-items: start;
     }
 
     h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.05;
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      line-height: 1.1;
       color: var(--navy);
-      margin: 0;
+      margin: 64px 0 22px;
       letter-spacing: -0.035em;
     }
 
     h3 {
       color: var(--navy);
       font-size: 1.08rem;
-      margin: 0 0 8px;
+      margin: 28px 0 8px;
     }
 
     p {
-      margin-top: 0;
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: 1.08rem;
+      margin: 0 0 22px;
     }
 
-    .content-flow {
-      max-width: 900px;
-      margin-left: 40px;
+    .intro {
+      font-size: clamp(1.15rem, 1.7vw, 1.35rem);
+      color: var(--ink);
+      margin-bottom: 44px;
     }
 
-    .content-flow p {
-      color: var(--muted);
-      font-size: 1.05rem;
+    .section {
+      border-top: 1px solid var(--line);
+      padding-top: 44px;
+      margin-top: 52px;
     }
 
-    .content-flow ul {
-      margin: 28px 0;
+    ul {
+      margin: 24px 0 28px;
       padding-left: 24px;
     }
 
-    .content-flow li {
-      margin-bottom: 18px;
+    li {
       color: var(--ink);
-      font-size: 1.05rem;
+      font-size: 1.06rem;
+      margin-bottom: 15px;
+      padding-left: 4px;
     }
 
-    .content-flow strong {
-      color: var(--navy);
-    }
-
-    .metrics {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .metrics li {
-      border-bottom: 1px solid var(--line);
-      padding: 18px 0;
-      color: var(--muted);
-      font-size: 1.03rem;
-    }
-
-    .metrics li:first-child {
-      padding-top: 0;
-    }
-
-    .metrics strong {
+    strong {
       color: var(--navy);
       font-weight: 800;
     }
 
-    .industries {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px 48px;
+    .metrics {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 28px;
     }
 
-    .industry {
-      padding-top: 0;
-    }
-
-    .closing {
-      border-top: 1px solid var(--line);
-      padding: 52px 0 0;
-      margin-top: 24px;
-    }
-
-    .closing h2 {
-      color: var(--navy);
-      margin-bottom: 20px;
-    }
-
-    .closing p {
+    .metrics li {
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+      margin: 0;
       color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 920px;
+    }
+
+    .metrics li:first-child {
+      border-top: 1px solid var(--line);
     }
 
     .closing-line {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.9rem, 3vw, 3rem);
+      font-size: clamp(1.9rem, 3.5vw, 3.2rem);
       line-height: 1.1;
       color: var(--navy);
-      margin-top: 30px;
-      letter-spacing: -0.03em;
-      max-width: 900px;
+      letter-spacing: -0.035em;
+      margin-top: 28px;
     }
 
     footer {
@@ -225,23 +176,8 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-      max-width: 1180px;
+      max-width: 920px;
       margin: 0 auto;
-    }
-
-    @media (max-width: 900px) {
-      .section-grid,
-      .industries {
-        grid-template-columns: 1fr;
-      }
-
-      .content-flow {
-        margin-left: 0;
-      }
-
-      main {
-        padding-top: 64px;
-      }
     }
 
     @media (max-width: 640px) {
@@ -250,8 +186,7 @@
       }
 
       main {
-        padding-left: 6%;
-        padding-right: 6%;
+        padding: 64px 6%;
       }
 
       .nav {
@@ -280,9 +215,7 @@
     <div class="eyebrow">About Aurik Advisory</div>
 
 ```
-<h1>
-  Strategic Vision, Relentless Execution & Exceptional Results
-</h1>
+<h1>Strategic Vision, Relentless Execution & Exceptional Results</h1>
 
 <p class="intro">
   Aurik Advisory is built for organizations navigating complex transformation,
@@ -291,135 +224,108 @@
 </p>
 
 <section class="section">
-  <div class="section-grid">
-    <h2>Executive Track Record</h2>
+  <h2>Executive Track Record</h2>
 
-    <div>
-      <p>
-        Aurik Advisory is led by a senior technology transformation executive
-        with deep experience across enterprise modernization, healthcare
-        technology, product delivery, platform transformation, and large-scale
-        engineering execution.
-      </p>
+  <p>
+    Aurik Advisory is led by a senior technology transformation executive
+    with deep experience across enterprise modernization, healthcare
+    technology, product delivery, platform transformation, and large-scale
+    engineering execution.
+  </p>
 
-      <p>
-        The work spans foundational infrastructure engineering at Sun
-        Microsystems, later acquired by Oracle, through leadership of
-        complex enterprise initiatives across highly regulated and
-        high-stakes operating environments.
-      </p>
+  <p>
+    The work spans foundational infrastructure engineering at Sun Microsystems,
+    later acquired by Oracle, through leadership of complex enterprise
+    initiatives across highly regulated and high-stakes operating environments.
+  </p>
 
-      <p>
-        The focus is simple: translate complex technology investments into
-        measurable business outcomes, stronger execution models, and better
-        customer experiences.
-      </p>
-    </div>
-  </div>
+  <p>
+    The focus is simple: translate complex technology investments into
+    measurable business outcomes, stronger execution models, and better
+    customer experiences.
+  </p>
 </section>
 
 <section class="section">
-  <h2>
-    Core Philosophy: Technology rarely limits transformation. Organizations do.
-  </h2>
+  <h2>Core Philosophy: Technology rarely limits transformation. Organizations do.</h2>
 
-  <div class="content-flow">
-    <p>
-      Traditional enterprise transformation models frequently fail not due to
-      technological limitations, but because of systemic gaps in organizational
-      alignment. Success requires a disruptive approach to engagement—ensuring
-      that from day one, three non-negotiables are locked into place:
-    </p>
+  <p>
+    Traditional enterprise transformation models frequently fail not due to
+    technological limitations, but because of systemic gaps in organizational
+    alignment. Success requires a disruptive approach to engagement—ensuring
+    that from day one, three non-negotiables are locked into place:
+  </p>
 
-    <ul>
-      <li>
-        <strong>Explicit Executive Sponsorship:</strong>
-        Securing active, visible alignment at the highest levels to clear
-        institutional roadblocks.
-      </li>
+  <ul>
+    <li>
+      <strong>Explicit Executive Sponsorship:</strong> Securing active,
+      visible alignment at the highest levels to clear institutional roadblocks.
+    </li>
 
-      <li>
-        <strong>Shared Metrics:</strong>
-        Establishing unified, transparent indicators of success that bridge
-        the gap between business and technology teams.
-      </li>
+    <li>
+      <strong>Shared Metrics:</strong> Establishing unified, transparent
+      indicators of success that bridge the gap between business and technology teams.
+    </li>
 
-      <li>
-        <strong>Cross-Functional Alignment:</strong>
-        Synchronizing product, engineering, and operational leadership to
-        drive predictable execution.
-      </li>
-    </ul>
+    <li>
+      <strong>Cross-Functional Alignment:</strong> Synchronizing product,
+      engineering, and operational leadership to drive predictable execution.
+    </li>
+  </ul>
 
-    <p>
-      When these elements are present, transformation becomes predictable.
-      When they are absent, even the best technology struggles to succeed.
-    </p>
-  </div>
+  <p>
+    When these elements are present, transformation becomes predictable.
+    When they are absent, even the best technology struggles to succeed.
+  </p>
 </section>
 
 <section class="section">
-  <div class="section-grid">
-    <h2>Experience & Scale</h2>
+  <h2>Experience & Scale</h2>
 
-    <div>
-      <ul class="metrics">
-        <li><strong>$50M+</strong> annual technology investment portfolio governance</li>
-        <li><strong>$75M</strong> managed services and partner delivery engagements</li>
-        <li><strong>250+</strong> global engineering and technology delivery professionals</li>
-        <li><strong>12.6M+</strong> members supported through enterprise digital platforms</li>
-        <li><strong>100M+</strong> annual transactions across high-volume technology ecosystems</li>
-        <li><strong>95%</strong> on-time delivery performance through stronger governance and execution discipline</li>
-      </ul>
-    </div>
-  </div>
+  <p>
+    Aurik Advisory brings operating experience across large technology
+    portfolios, global engineering organizations, managed services ecosystems,
+    and high-volume enterprise platforms.
+  </p>
+
+  <ul class="metrics">
+    <li><strong>$50M+</strong> annual technology investment portfolio governance</li>
+    <li><strong>$75M</strong> managed services and partner delivery engagements</li>
+    <li><strong>250+</strong> global engineering and technology delivery professionals</li>
+    <li><strong>12.6M+</strong> members supported through enterprise digital platforms</li>
+    <li><strong>100M+</strong> annual transactions across high-volume technology ecosystems</li>
+    <li><strong>95%</strong> on-time delivery performance through stronger governance and execution discipline</li>
+  </ul>
 </section>
 
 <section class="section">
-  <div class="section-grid">
-    <h2>Industry Experience</h2>
+  <h2>Industry Experience</h2>
 
-    <div class="industries">
-      <div class="industry">
-        <h3>Healthcare & Life Sciences</h3>
-        <p>
-          Deep experience in regulated healthcare ecosystems, including
-          platforms, member experience, benefits, EDI, claims-adjacent
-          capabilities, and enterprise modernization.
-        </p>
-      </div>
+  <p>
+    The advisory practice is grounded in experience across healthcare,
+    technology, financial services, telecommunications, and enterprise services.
+  </p>
 
-      <div class="industry">
-        <h3>Technology & Software Engineering</h3>
-        <p>
-          Technical foundation in infrastructure, distributed systems,
-          software delivery, product engineering, and scalable platform
-          operating models.
-        </p>
-      </div>
+  <p>
+    In healthcare and life sciences, the work includes regulated ecosystems
+    involving member experience, benefits, EDI, claims-adjacent capabilities,
+    privacy, integration, and enterprise modernization.
+  </p>
 
-      <div class="industry">
-        <h3>Financial Services</h3>
-        <p>
-          Experience supporting enterprise delivery, modernization,
-          governance, and customer-facing technology capabilities in
-          large-scale financial services environments.
-        </p>
-      </div>
+  <p>
+    In technology and software engineering, the foundation includes infrastructure,
+    distributed systems, software delivery, product engineering, and scalable
+    platform operating models.
+  </p>
 
-      <div class="industry">
-        <h3>Telecommunications & Enterprise Services</h3>
-        <p>
-          Experience working across large enterprise environments where
-          reliability, operational discipline, and customer experience
-          are central to technology value.
-        </p>
-      </div>
-    </div>
-  </div>
+  <p>
+    In financial services and telecommunications, the work has focused on
+    reliability, customer-facing technology capabilities, governance,
+    modernization, and disciplined execution in complex enterprise environments.
+  </p>
 </section>
 
-<section class="closing">
+<section class="section">
   <h2>The Advisory Engagement</h2>
 
   <p>
