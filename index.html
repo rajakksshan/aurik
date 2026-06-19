@@ -10,7 +10,6 @@
       --ink: #1f2937;
       --muted: #6b7280;
       --gold: #b8892f;
-      --gold-soft: #f6efe2;
       --cream: #fbfaf7;
       --line: #e5e0d6;
       --white: #ffffff;
@@ -26,10 +25,6 @@
       color: var(--ink);
       background: var(--cream);
       line-height: 1.6;
-    }
-
-    .page {
-      min-height: 100vh;
     }
 
     header {
@@ -60,10 +55,6 @@
 
     .hero {
       padding: 92px 8% 76px;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 56px;
-      align-items: center;
       max-width: 1280px;
       margin: 0 auto;
     }
@@ -79,17 +70,25 @@
 
     h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      font-size: clamp(3rem, 6vw, 5.6rem);
       line-height: 0.96;
-      margin: 0 0 28px;
+      margin: 0 0 22px;
       color: var(--navy);
       letter-spacing: -0.05em;
+      max-width: 1100px;
+    }
+
+    .subhead {
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+      color: var(--navy);
+      margin: 0 0 18px;
+      max-width: 1100px;
     }
 
     .hero p {
       font-size: clamp(1.05rem, 1.5vw, 1.3rem);
       color: var(--muted);
-      max-width: 760px;
+      max-width: 1100px;
       margin: 0 0 34px;
     }
 
@@ -127,63 +126,10 @@
       box-shadow: 0 10px 24px rgba(17, 24, 39, 0.12);
     }
 
-    .hero-card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 24px 70px rgba(17, 24, 39, 0.09);
-    }
-
-    .hero-card h2 {
-      margin: 0 0 20px;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--navy);
-      font-size: 2rem;
-      line-height: 1.1;
-    }
-
-    .metric {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .metric strong {
-      color: var(--navy);
-      font-size: 1.15rem;
-    }
-
-    .metric span {
-      color: var(--muted);
-      text-align: right;
-    }
-
     section {
       padding: 78px 8%;
       max-width: 1280px;
       margin: 0 auto;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 36px;
-    }
-
-    .section-head h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.1rem, 4vw, 3.5rem);
-      margin: 0 0 14px;
-      color: var(--navy);
-      letter-spacing: -0.04em;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.08rem;
     }
 
     .services {
@@ -198,9 +144,6 @@
       border-radius: 22px;
       padding: 24px;
       min-height: 238px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       transition: 0.2s ease;
     }
 
@@ -269,11 +212,6 @@
     }
 
     @media (max-width: 1100px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 68px;
-      }
-
       .services {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -297,7 +235,7 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-card, .statement {
+      .statement {
         padding: 28px;
       }
 
@@ -307,6 +245,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
@@ -316,61 +255,53 @@
 
     <main>
       <section class="hero">
-        <div>
-          <div class="eyebrow">Enterprise Technology Advisory</div>
-          <h1>For Complex, High-Stakes Organizations</h1>
-          <p>
-            Partnering with organizations to modernize technology platforms, strengthen delivery execution,
-            and align capital investments to deliver measurable business outcomes and unparalleled customer experiences.
-          </p>
-          <div class="cta-row">
-            <a class="button primary" href="mailto:contact@aurikadvisory.com">Start a Conversation</a>
-            <a class="button secondary" href="#services">Explore Services</a>
-          </div>
-        </div>
+        <div class="eyebrow">Enterprise Technology Advisory</div>
 
+        <h1>Enterprise Technology Advisory</h1>
+
+        <p class="subhead">For Complex, High-Stakes Organizations</p>
+
+        <p>
+          Partnering with organizations to modernize technology platforms, strengthen delivery execution,
+          and align capital investments to deliver measurable business outcomes and unparalleled customer experiences.
+        </p>
+
+        <div class="cta-row">
+          <a class="button primary" href="mailto:contact@aurikadvisory.com">Start a Conversation</a>
+          <a class="button secondary" href="#services">Explore Services</a>
+        </div>
       </section>
 
       <section id="services">
-       <div class="services">
+        <div class="services">
           <article class="service-card">
-            <div>
-              <div class="service-number">01</div>
-              <h3>Executive Advisory</h3>
-              <p>Partner with executive leadership to navigate complex technology, transformation, and investment decisions.</p>
-            </div>
+            <div class="service-number">01</div>
+            <h3>Executive Advisory</h3>
+            <p>Partner with executive leadership to navigate complex technology, transformation, and investment decisions.</p>
           </article>
 
           <article class="service-card">
-            <div>
-              <div class="service-number">02</div>
-              <h3>Product Strategy & Roadmaps</h3>
-              <p>Translate business strategy into actionable product and technology roadmaps that drive growth, innovation, and measurable outcomes.</p>
-            </div>
+            <div class="service-number">02</div>
+            <h3>Product Strategy & Roadmaps</h3>
+            <p>Translate business strategy into actionable product and technology roadmaps that drive growth, innovation, and measurable outcomes.</p>
           </article>
 
           <article class="service-card">
-            <div>
-              <div class="service-number">03</div>
-              <h3>Platform Modernization</h3>
-              <p>Modernize platforms and operating models to improve scalability, resilience, and customer experience.</p>
-            </div>
+            <div class="service-number">03</div>
+            <h3>Platform Modernization</h3>
+            <p>Modernize platforms and operating models to improve scalability, resilience, and customer experience.</p>
           </article>
 
           <article class="service-card">
-            <div>
-              <div class="service-number">04</div>
-              <h3>Delivery Transformation</h3>
-              <p>Strengthen governance, execution discipline, and portfolio visibility to improve predictability and value realization.</p>
-            </div>
+            <div class="service-number">04</div>
+            <h3>Delivery Transformation</h3>
+            <p>Strengthen governance, execution discipline, and portfolio visibility to improve predictability and value realization.</p>
           </article>
 
           <article class="service-card">
-            <div>
-              <div class="service-number">05</div>
-              <h3>AI-Enabled Transformation</h3>
-              <p>Leverage AI, automation, and Human-in-the-Loop (HITL) models to accelerate decision-making and operational performance.</p>
-            </div>
+            <div class="service-number">05</div>
+            <h3>AI-Enabled Transformation</h3>
+            <p>Leverage AI, automation, and Human-in-the-Loop (HITL) models to accelerate decision-making and operational performance.</p>
           </article>
         </div>
 
