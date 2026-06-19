@@ -133,25 +133,29 @@
       font-size: 1.02rem;
     }
 
-    .principle {
-      margin-bottom: 30px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--line);
+    .content-flow {
+      max-width: 900px;
+      margin-left: 40px;
     }
 
-    .principle:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .content-flow p {
+      color: var(--muted);
+      font-size: 1.05rem;
     }
 
-    .number {
-      color: var(--gold);
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      display: block;
-      margin-bottom: 10px;
+    .content-flow ul {
+      margin: 28px 0;
+      padding-left: 24px;
+    }
+
+    .content-flow li {
+      margin-bottom: 18px;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .content-flow strong {
+      color: var(--navy);
     }
 
     .metrics {
@@ -183,25 +187,22 @@
     }
 
     .industry {
-      border-top: 1px solid var(--line);
-      padding-top: 20px;
+      padding-top: 0;
     }
 
     .closing {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 30px;
-      padding: 52px;
+      border-top: 1px solid var(--line);
+      padding: 52px 0 0;
       margin-top: 24px;
     }
 
     .closing h2 {
-      color: var(--white);
+      color: var(--navy);
       margin-bottom: 20px;
     }
 
     .closing p {
-      color: #d1d5db;
+      color: var(--muted);
       font-size: 1.08rem;
       max-width: 920px;
     }
@@ -210,7 +211,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(1.9rem, 3vw, 3rem);
       line-height: 1.1;
-      color: var(--white);
+      color: var(--navy);
       margin-top: 30px;
       letter-spacing: -0.03em;
       max-width: 900px;
@@ -234,6 +235,10 @@
         grid-template-columns: 1fr;
       }
 
+      .content-flow {
+        margin-left: 0;
+      }
+
       main {
         padding-top: 64px;
       }
@@ -251,10 +256,6 @@
 
       .nav {
         display: none;
-      }
-
-      .closing {
-        padding: 30px;
       }
     }
   </style>
@@ -318,51 +319,42 @@
 </section>
 
 <section class="section">
-  <div class="section-grid">
-    <h2>Core Philosophy</h2>
+  <h2>
+    Core Philosophy: Technology rarely limits transformation. Organizations do.
+  </h2>
 
-    <div>
-      <p>
-        Technology rarely limits transformation. Organizations do.
-      </p>
+  <div class="content-flow">
+    <p>
+      Traditional enterprise transformation models frequently fail not due to
+      technological limitations, but because of systemic gaps in organizational
+      alignment. Success requires a disruptive approach to engagement—ensuring
+      that from day one, three non-negotiables are locked into place:
+    </p>
 
-      <p>
-        Enterprise transformation efforts often struggle not because the
-        technology is impossible, but because leadership alignment, shared
-        accountability, governance discipline, and execution clarity are
-        missing.
-      </p>
+    <ul>
+      <li>
+        <strong>Explicit Executive Sponsorship:</strong>
+        Securing active, visible alignment at the highest levels to clear
+        institutional roadblocks.
+      </li>
 
-      <div class="principle">
-        <span class="number">01</span>
-        <h3>Explicit Executive Sponsorship</h3>
-        <p>
-          Sustainable transformation requires active, visible executive
-          sponsorship to clear roadblocks, resolve trade-offs, and keep
-          the organization aligned around the outcomes that matter.
-        </p>
-      </div>
+      <li>
+        <strong>Shared Metrics:</strong>
+        Establishing unified, transparent indicators of success that bridge
+        the gap between business and technology teams.
+      </li>
 
-      <div class="principle">
-        <span class="number">02</span>
-        <h3>Shared Metrics</h3>
-        <p>
-          Business, product, engineering, and operations teams must operate
-          against common measures of success. Without shared metrics,
-          execution becomes activity instead of value creation.
-        </p>
-      </div>
+      <li>
+        <strong>Cross-Functional Alignment:</strong>
+        Synchronizing product, engineering, and operational leadership to
+        drive predictable execution.
+      </li>
+    </ul>
 
-      <div class="principle">
-        <span class="number">03</span>
-        <h3>Cross-Functional Alignment</h3>
-        <p>
-          Predictable delivery requires product, technology, operations,
-          finance, and business stakeholders to move together with clear
-          ownership, transparent decision-making, and disciplined execution.
-        </p>
-      </div>
-    </div>
+    <p>
+      When these elements are present, transformation becomes predictable.
+      When they are absent, even the best technology struggles to succeed.
+    </p>
   </div>
 </section>
 
