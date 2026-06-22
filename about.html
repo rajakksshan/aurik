@@ -182,32 +182,41 @@
       grid-column: span 2;
     }
 
-    /* Industry Layout */
-    .industry-grid {
+    /* Industry Layout - columns with named clients */
+    .industry-columns {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      margin-top: 24px;
     }
 
-    .industry-pill {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--card-bg);
-      border: 1px solid var(--line);
-      padding: 18px 24px;
-      border-radius: 14px;
-    }
-
-    .industry-icon {
-      font-size: 1.3rem;
-    }
-
-    .industry-name {
-      font-size: 1.02rem;
+    .industry-column h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      color: var(--gold);
+      font-size: 1.15rem;
       font-weight: 600;
-      color: var(--ink);
+      margin: 0 0 18px;
+    }
+
+    .industry-column ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .industry-column li {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.02rem;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .industry-column li .note {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     /* Story Styling */
@@ -248,12 +257,22 @@
       font-size: 0.9rem;
     }
 
+    @media (max-width: 900px) {
+      .industry-columns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+    }
+
     @media (max-width: 768px) {
       .accomplishments-grid {
         grid-template-columns: 1fr;
       }
       .full-width-card {
         grid-column: span 1;
+      }
+      .industry-columns {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -351,22 +370,39 @@
 
       <section class="section industry-section">
         <h2 class="section-title">Industry Experience</h2>
-        <div class="industry-grid">
-          <div class="industry-pill">
-            <span class="industry-icon">⚕️</span>
-            <span class="industry-name">Healthcare & Payer Systems</span>
+        <div class="industry-columns">
+          <div class="industry-column">
+            <h3>Technology & Software</h3>
+            <ul>
+              <li>Microsoft</li>
+              <li>Electronics for Imaging</li>
+              <li>Entrust <span class="note">(formerly Datacard Systems)</span></li>
+              <li>Origin Digital</li>
+              <li>Sun Microsystems <span class="note">(acquired by Oracle)</span></li>
+            </ul>
           </div>
-          <div class="industry-pill">
-            <span class="industry-icon">💳</span>
-            <span class="industry-name">Financial Services & Premiums</span>
+          <div class="industry-column">
+            <h3>Financial Services</h3>
+            <ul>
+              <li>JPMorgan Chase</li>
+              <li>Guardian Life Insurance</li>
+              <li>Desert Financial</li>
+            </ul>
           </div>
-          <div class="industry-pill">
-            <span class="industry-icon">☁️</span>
-            <span class="industry-name">Cloud-Native Platforms & SaaS</span>
+          <div class="industry-column">
+            <h3>Healthcare</h3>
+            <ul>
+              <li>Kaiser Permanente</li>
+              <li>CVS Caremark</li>
+              <li>CareFirst BCBS</li>
+            </ul>
           </div>
-          <div class="industry-pill">
-            <span class="industry-icon">🤖</span>
-            <span class="industry-name">AI-Driven Operations & SDLC Automation</span>
+          <div class="industry-column">
+            <h3>Other Industries</h3>
+            <ul>
+              <li>Philip Morris</li>
+              <li>AT&amp;T</li>
+            </ul>
           </div>
         </div>
       </section>
