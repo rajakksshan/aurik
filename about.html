@@ -1,355 +1,220 @@
-<!DOCTYPE html>
+<main class="content-wrapper">
+  <section class="section foreword-section">
+    <h2 class="section-title">Foreword</h2>
+    <p class="intro">
+      When power rests with a select few, they bear the responsibility to wield it in a way that benefits everyone. Technology leadership is no different. The decisions we make—what we build, how we build it, and why we build it—have consequences that extend far beyond systems and software. They shape businesses, experiences, opportunities, and ultimately people's lives.
+    </p>
+    <p>
+      I am a Senior Technology Executive with more than two decades of experience leading product management, platform modernization, portfolio governance, and enterprise transformation initiatives across Fortune 500 organizations. My career has been defined by bridging business strategy and technology execution—translating ambitious visions into scalable solutions that deliver measurable business outcomes, exceptional customer experiences, and lasting organizational value.
+    </p>
+  </section>
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Aurik Advisory</title>
-
-  <style>
-    :root {
-      --navy: #111827;
-      --ink: #1f2937;
-      --muted: #6b7280;
-      --gold: #b8892f;
-      --cream: #fbfaf7;
-      --line: #e5e0d6;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.7;
-    }
-
-    header {
-      padding: 28px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
-      background: rgba(251, 250, 247, 0.94);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: var(--navy);
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      text-decoration: none;
-    }
-
-    .nav {
-      display: flex;
-      gap: 24px;
-      font-size: 0.92rem;
-      align-items: center;
-    }
-
-    .nav a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: var(--navy);
-    }
-
-    main {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 86px 8%;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-      font-size: 0.82rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
-      line-height: 1;
-      margin: 0 0 28px;
-      color: var(--navy);
-      letter-spacing: -0.045em;
-    }
-
-    h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 3.2vw, 3rem);
-      line-height: 1.1;
-      color: var(--navy);
-      margin: 0 0 22px;
-      letter-spacing: -0.035em;
-    }
-
-    h3 {
-      color: var(--navy);
-      font-size: 1.08rem;
-      margin: 28px 0 8px;
-    }
-
-    p {
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin: 0 0 22px;
-    }
-
-    .intro {
-      font-size: clamp(1.15rem, 1.7vw, 1.35rem);
-      color: var(--ink);
-      margin-bottom: 44px;
-    }
-
-    .section {
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-      margin-top: 36px;
-    }
-
-    ul {
-      margin: 24px 0 28px;
-      padding-left: 24px;
-    }
-
-    li {
-      color: var(--ink);
-      font-size: 1.06rem;
-      margin-bottom: 15px;
-      padding-left: 4px;
-    }
-
-    strong {
-      color: var(--navy);
-      font-weight: 800;
-    }
-
-    .metrics {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 28px;
-    }
-
-    .metrics li {
-      border-bottom: 1px solid var(--line);
-      padding: 16px 0;
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .metrics li:first-child {
-      border-top: 1px solid var(--line);
-    }
-
-    .closing-line {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.9rem, 3.5vw, 3.2rem);
-      line-height: 1.1;
-      color: var(--navy);
-      letter-spacing: -0.035em;
-      margin-top: 28px;
-    }
-
-    footer {
-      padding: 34px 8%;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 640px) {
-      header {
-        padding: 22px 6%;
-      }
-
-      main {
-        padding: 64px 6%;
-      }
-
-      .nav {
-        display: none;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
-  <header>
-    <a class="brand" href="index.html">Aurik Advisory</a>
-
-
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="mailto:contact@aurikadvisory.com">Contact</a>
-</nav>
-
-
-  </header>
-
-  <main>
-    <div class="eyebrow">About Aurik Advisory</div>
-
-
-<h1>Strategic Vision, Relentless Execution & Exceptional Results</h1>
-
-<p class="intro">
-  Aurik Advisory is built for organizations navigating complex transformation,
-  high-stakes modernization, and to address the critical gap between executive intent, technology strategy, enterprise execution and business results.
-</p>
-
-<section class="section">
-  <h2>Foreword</h2>
-
-  <p>
-    When power rests with a select few, they bear the responsibility to wield it in a way that benefits everyone. Technology leadership is no different. The decisions we make—what we build, how we build it, and why we build it—have consequences that extend far beyond systems and software. They shape businesses, experiences, opportunities, and ultimately people's lives.
-  </p>
- <h2>Career Accomplishments</h2>
-  <p>
-I am a Senior Technology Executive with more than two decades of experience leading product management, platform modernization, portfolio governance, and enterprise transformation initiatives across Fortune 500 organizations. My career has been defined by bridging business strategy and technology execution—translating ambitious visions into scalable solutions that deliver measurable business outcomes, exceptional customer experiences, and lasting organizational value.
-  </p>
-
-  <p>
-I excel at pivoting organizations to product and platform centric operating models through SAFe Agile, DevOps, AI, and automation to accelerate speed to market and deliver significant gains in velocity, release cadence, and operational efficiency across billion-dollar product lines. 
-  </p>
-
-   <p>
-    Extensive experience scaling Enterprise PMO and Quality Engineering shared services models, standardizing program management, automation, performance and reliability engineering practices. Proven expertise building metrics-driven operating cultures anchored in KPIs, SLAs, and OLAs. 
-   </p>
-
-   <p>
-Throughout my career, I have invested heavily in building cultures of growth, innovation, recognition, and accountability. I believe in setting a high bar, recognizing and rewarding excellence, and helping individuals see the larger purpose behind the work they do. Afterall, the most meaningful legacy of leadership is not the programs delivered, but the people you've helped grow and the leaders they become. A lesser-known chapter of my early career: before enterprise transformation and AI initiatives, I assembled and sold custom computers, founded online ventures, and co-founded a startup recognized at Portland's Pitchlandia competition. The titles changed, but the founder mentality never did—the insatiable curiosity to invent, build, learn, and continuously explore what is possible remains as strong today as it was then.
-  </p>
-  
-</section>
-
-<section class="section">
-  <h2>Core Philosophy: Technology rarely limits transformation. Organizations do.</h2>
-
-  <p>
-    Traditional enterprise transformation models frequently fail not due to
-    technological limitations, but because of systemic gaps in organizational
-    alignment. Success requires a disruptive approach to engagement—ensuring
-    that from day one, three non-negotiables are locked into place:
-  </p>
-
-  <ul>
-    <li>
-      <strong>Explicit Executive Sponsorship:</strong> Securing active,
-      visible alignment at the highest levels to clear institutional roadblocks.
-    </li>
-
-    <li>
-      <strong>Shared Metrics:</strong> Establishing unified, transparent
-      indicators of success that bridge the gap between business and technology teams.
-    </li>
-
-    <li>
-      <strong>Cross-Functional Alignment:</strong> Synchronizing product,
-      engineering, and operational leadership to drive predictable execution.
-    </li>
-  </ul>
-
-  <p>
-    When these elements are present, transformation becomes predictable.
+  <section class="section accomplishments-section">
+    <h2 class="section-title">Career Accomplishments</h2>
     
-  </p>
-</section>
+    <div class="accomplishments-grid">
+      <div class="accomplishment-card">
+        <h3>Enterprise Transformation</h3>
+        <ul>
+          <li>Led product management, platform modernization, and portfolio governance initiatives across Fortune 500 organizations.</li>
+          <li>Governed technology portfolios supporting multi-billion-dollar business operations and millions of end users.</li>
+          <li>Directed enterprise modernization programs spanning legacy, cloud, SaaS, and platform-based operating models.</li>
+        </ul>
+      </div>
 
-<section class="section">
-  <h2>Experience & Scale</h2>
+      <div class="accomplishment-card">
+        <h3>Delivery at Scale</h3>
+        <ul>
+          <li>Built and led global engineering organizations comprising <strong>250+</strong> technology professionals.</li>
+          <li>Established product-centric operating models leveraging SAFe Agile, DevOps, AI, and automation.</li>
+          <li>Improved delivery predictability, release velocity, operational efficiency, and speed to market across large-scale product portfolios.</li>
+        </ul>
+      </div>
 
-  <p>
-    Aurik Advisory brings operating experience across large technology
-    portfolios, global engineering organizations, managed services ecosystems,
-    and high-volume enterprise platforms.
-  </p>
+      <div class="accomplishment-card">
+        <h3>Strategic Partnerships</h3>
+        <ul>
+          <li>Directed multi-million-dollar partnerships across Accenture, TCS, HCL, Deloitte, DXC, and other global technology providers.</li>
+          <li>Created performance-based operating models built on shared accountability, outcome-driven governance, and economies of scale.</li>
+          <li>Established strategic partner ecosystems capable of delivering predictable outcomes and sustainable value realization.</li>
+        </ul>
+      </div>
 
-  <ul class="metrics">
-    <li><strong>$50M+</strong> annual technology investment portfolio governance</li>
-    <li><strong>$75M</strong> managed services and partner delivery engagements</li>
-    <li><strong>250+</strong> global engineering and technology delivery professionals</li>
-    <li><strong>12.6M+</strong> members supported through enterprise digital platforms</li>
-    <li><strong>100M+</strong> annual transactions across high-volume technology ecosystems</li>
-    <li><strong>95%</strong> on-time delivery performance through stronger governance and execution discipline</li>
-  </ul>
-</section>
+      <div class="accomplishment-card">
+        <h3>Shared Services & Governance</h3>
+        <ul>
+          <li>Built and scaled Enterprise PMO and Quality Engineering shared service organizations.</li>
+          <li>Standardized governance frameworks, automation practices, performance engineering, reliability engineering, KPIs, SLAs, and OLAs.</li>
+          <li>Developed metrics-driven operating cultures focused on transparency, accountability, and continuous improvement.</li>
+        </ul>
+      </div>
 
-<section class="section">
-  <h2>Industry Experience</h2>
+      <div class="accomplishment-card full-width-card">
+        <h3>Leadership</h3>
+        <ul>
+          <li>Built cultures centered on growth, innovation, accountability, and recognition.</li>
+          <li>Mentored leaders across engineering, product management, quality engineering, delivery management, and operations.</li>
+          <li>Focused on developing people, not simply delivering programs.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    The advisory practice is grounded in experience across healthcare,
-    technology, financial services, telecommunications, and enterprise services.
-  </p>
+  <section class="section industry-section">
+    <h2 class="section-title">Industry Experience</h2>
+    <div class="industry-grid">
+      <div class="industry-pill">
+        <span class="industry-icon">⚕️</span>
+        <span class="industry-name">Healthcare & Payer Systems</span>
+      </div>
+      <div class="industry-pill">
+        <span class="industry-icon">💳</span>
+        <span class="industry-name">Financial Services & Premiums</span>
+      </div>
+      <div class="industry-pill">
+        <span class="industry-icon">☁️</span>
+        <span class="industry-name">Cloud-Native Platforms & SaaS</span>
+      </div>
+      <div class="industry-pill">
+        <span class="industry-icon">🤖</span>
+        <span class="industry-name">AI-Driven Operations & SDLC Automation</span>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    In healthcare and life sciences, the work includes regulated ecosystems
-    involving member experience, benefits, EDI, claims-adjacent capabilities,
-    privacy, integration, and enterprise modernization.
-  </p>
+  <section class="section story-section">
+    <h2 class="section-title">My Story</h2>
+    <div class="narrative-body">
+      <p>What many people do not know is that my journey into technology leadership did not begin inside a Fortune 500 boardroom.</p>
+      
+      <p>Long before enterprise transformation programs, cloud modernization initiatives, and AI-enabled operating models, I was building and selling custom computers, experimenting with online ventures, and pursuing ideas simply because I was curious to see if they could be brought to life.</p>
+      
+      <p>I later co-founded a startup that was recognized at Portland's Pitchlandia competition—an experience that reinforced my appreciation for innovation, resilience, and the courage required to build something from nothing.</p>
+      
+      <blockquote class="story-highlight">
+        "The titles have changed over the years, but the mindset never has. At my core, I remain a builder."
+      </blockquote>
+      
+      <p>I am driven by curiosity, energized by complexity, and motivated by the challenge of creating something better than what exists today. Whether advising executive leadership, transforming enterprise platforms, mentoring future leaders, or exploring the possibilities created by emerging technologies, I continue to approach every opportunity with the same founder mentality that first sparked my interest in technology decades ago.</p>
+      
+      <p>That spirit ultimately led to the creation of <strong>Aurik Advisory</strong>.</p>
+      
+      <p>Aurik Advisory exists to help organizations bridge the gap between strategic ambition and execution reality—to modernize technology, strengthen delivery capabilities, develop high-performing teams, and transform complex challenges into measurable business value.</p>
+      
+      <p class="story-closing">
+        Because technology alone does not create transformation. <br>
+        <strong>People do.</strong>
+      </p>
+    </div>
+  </section>
+</main>
 
-  <p>
-    In technology and software engineering, the foundation includes infrastructure,
-    distributed systems, software delivery, product engineering, and scalable
-    platform operating models.
-  </p>
+<style>
+  :root {
+    --card-bg: rgba(255, 255, 255, 0.4);
+  }
 
-  <p>
-    In financial services and telecommunications, the work has focused on
-    reliability, customer-facing technology capabilities, governance,
-    modernization, and disciplined execution in complex enterprise environments.
-  </p>
-</section>
+  .content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
-<section class="section">
-  <h2>The Advisory Engagement</h2>
+  .section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--navy);
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
 
-  <p>
-    Aurik Advisory partners with executive leaders to modernize platforms,
-    strengthen delivery capabilities, improve portfolio governance, develop
-    business-aligned technology roadmaps, and enable AI-driven transformation.
-  </p>
+  /* Accomplishments Layout */
+  .accomplishments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
 
-  <p>
-    Every engagement is grounded in a simple objective:
-  </p>
+  .accomplishment-card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    padding: 32px;
+    border-radius: 4px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
 
-  <div class="closing-line">
-    Transform technology investments into measurable business value.
-  </div>
-</section>
+  .accomplishment-card:hover {
+    border-color: var(--navy);
+  }
 
+  .accomplishment-card h3 {
+    margin-top: 0;
+    color: var(--navy);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
 
-  </main>
+  .full-width-card {
+    grid-column: span 2;
+  }
 
-  <footer>
-    <div>© 2026 Aurik Advisory. All rights reserved.</div>
-    <div>contact@aurikadvisory.com</div>
-  </footer>
-</body>
-</html>
+  /* Industry Layout style inspired by executive matrices */
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .industry-pill {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    padding: 18px 24px;
+    border-radius: 4px;
+  }
+
+  .industry-icon {
+    font-size: 1.3rem;
+  }
+
+  .industry-name {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Story Styling Features */
+  .story-highlight {
+    font-family: serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--navy);
+    line-height: 1.5;
+    margin: 36px 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--navy);
+  }
+
+  .story-closing {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 40px;
+    color: var(--ink);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .accomplishments-grid {
+      grid-template-columns: 1fr;
+    }
+    .full-width-card {
+      grid-column: span 1;
+    }
+  }
+</style>
