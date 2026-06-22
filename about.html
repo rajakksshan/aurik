@@ -97,6 +97,40 @@
       padding: 0 24px 80px;
     }
 
+    .profile-block {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 36px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .profile-photo {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+      background: var(--card-bg);
+      filter: grayscale(100%) contrast(1.05) brightness(0.97) sepia(8%);
+      opacity: 0.92;
+    }
+
+    .profile-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy);
+    }
+
+    .profile-title {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
     .section {
       padding: 40px 0;
       border-top: 1px solid var(--line);
@@ -306,6 +340,14 @@
       <h1>Built on two decades of enterprise technology leadership.</h1>
     </section>
 
+    <section class="profile-block">
+      <img class="profile-photo" src="PROFILEPIC1.jpg" alt="Karthik Sudharshan" />
+      <div class="profile-info">
+        <div class="profile-name">Karthik Sudharshan</div>
+        <div class="profile-title">Founder, Aurik Advisory</div>
+      </div>
+    </section>
+
     <main class="content-wrapper">
       <section class="section foreword-section">
         <h2 class="section-title">Foreword</h2>
@@ -410,7 +452,7 @@
       <section class="section story-section">
         <h2 class="section-title">My Story</h2>
         <div class="narrative-body">
-          <p>My journey into technology leadership did not begin inside a Fortune 500 boardroom.</p>
+          <p>What many people do not know is that my journey into technology leadership did not begin inside a Fortune 500 boardroom.</p>
 
           <p>Long before enterprise transformation programs, cloud modernization initiatives, and AI-enabled operating models, I was building and selling custom computers, experimenting with online ventures, and pursuing ideas simply because I was curious to see if they could be brought to life.</p>
 
